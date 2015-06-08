@@ -1,0 +1,39 @@
+
+
+<% if @quiz.errors.any? %>
+  <ul>
+    <% @quiz.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @quiz do |f| %>
+  <div>
+    <%= f.label "#{:name} *" %>
+    <%= f.text_field :name %>
+  </div>
+  <br>
+  <div>
+    <%= f.label "#{:email} *" %>
+    <%= f.email_field :email %>
+  </div>
+  <br>
+  <div>
+    <%= f.label "#{:department}      " %>
+    <%= radio_button("post", "category", "Sales") %>
+    <%= f.label "  Sales  " %>
+    <%= radio_button("post", "category", "Marketing") %>
+    <%= f.label "  Marketing  " %>
+    <%= radio_button("post", "category", "Technical") %>
+    <%= f.label "  Technical  " %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </div>
+  <br>
+
+  <%= f.submit "Save" %>
+<% end %>

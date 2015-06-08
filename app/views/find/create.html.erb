@@ -1,0 +1,21 @@
+<h1>Your find create page!</h1>
+<table border="1";border-style="solid">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Message</th>
+    <th>Action</th>
+  </tr>
+</thead>
+<%  @quiz.each do |i| %>
+  <tr>
+  <td><%= "#{i.name}" %> </td>
+  <td><%= link_to "mailto:#{i.email}" %> </td>
+  <td><%= "#{i.department}" %> </td>
+  <td><%= "#{i.message}" %> </td>
+  <td><%= "#{i.action}" %> </td>
+  </tr>
+<% end %>
+</table>

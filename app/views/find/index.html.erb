@@ -1,0 +1,37 @@
+<!--<h1> Clike Here to Search </h1>
+<hr>
+
+<%= form_tag "/find" do %>
+ <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :department %>
+    <%= radio_button("post", "category", "Sales") %>
+    <%= label_tag "  Sales  " %>
+    <%= radio_button("post", "category", "Marketing") %>
+    <%= label_tag "  Marketing  " %>
+    <%= radio_button("post", "category", "Technical") %>
+    <%= label_tag "  Technical  " %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :message %>
+    <%= text_area_tag :message %>
+  </div>
+  <br>
+  <%= submit_tag "Search" %>
+  <% end %>-->
+
+
+<h1> If you want to check Actions, click here</h1>
+  <%= form_tag "/find" do %>
+  <%= submit_tag "Ordered as Not Done Action Status" %>
+  <% end %>
